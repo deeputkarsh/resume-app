@@ -1,0 +1,14 @@
+@import "mixin";
+.list-items {
+  padding: 10px 0;
+  border-bottom: 1px dashed #333;
+  &:last-of-type {
+    border-bottom: none;
+  }
+  ul {
+    margin: 0;
+  }
+}
+.icon{
+  @include large-icon;
+}

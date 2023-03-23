@@ -1,0 +1,71 @@
+{
+  "title": "CORPORATE EXPERIENCE",
+  "list": [{
+    "details": {
+      "designation": "DevOps Lead",
+      "companyName": "MakeO (AMPA Orthodontics pvt ltd)",
+      "duration": "09/2021 - Ongoing",
+      "location": "Mumbai",
+      "companyOverview": "Health-tech company which provides at home Teeth Aligners and skin care service"
+    },
+    "responsiblities": [
+      "Responsible for creating and maintaining the whole Infrastructure of the application in AWS cloud",
+      "Ensuring the web applications meet the industrial security standards",
+      "Setup CI/CD for the development team using Github, Codepipeline, Codebuild and CodeDeploy",
+      "Created mongoDB cluster and migrated to Atlas for mongoDB",
+      "Setup a replication for Data warehousing from mysql (Amazon RDS) to Amazon Redshift using AWS Data Migration Service",
+      "Migrated all applications from EC2 to ECS (Fargate)",
+      "Created and deployed serverless applications having Lambda functions, API Gateway, SQS and S3 using Serverless Framework",
+      "Helped setup infrastructure for business launch in the UAE to ensure data residency compliance"
+    ]
+  }, {
+    "details": {
+      "designation": "Senior Developer - Digital Marketing",
+      "companyName": "Tata AIG General Insurance Company Ltd.",
+      "duration": "09/2020 - 09/2021",
+      "location": "Mumbai",
+      "companyOverview": "One of the leading companies in General Insurance sector in India"
+    },
+    "responsiblities": [
+      "Development of serverless microservices with API Gateway and Lambda functions",
+      "Setup infrastructure for private npm registry with Verdaccio",
+      "Created and published npm packages in the registry",
+      "Created coding guidelines and git flow management",
+      "Mentoring and providing guidance to Interns",
+      "Optimization and improvement of the development life cycle"
+    ]
+  }, {
+    "details": {
+      "designation": "Software Engineer",
+      "companyName": "HDFC Life Insurance Company Ltd.",
+      "duration": "02/2019 - 09/2020",
+      "location": "Mumbai",
+      "companyOverview": "One of the leading companies in Life Insurance sector in India"
+    },
+    "responsiblities": [
+      "Development of nodeJs, express framework based microservices apis for consumption in various applications",
+      "Designing project architecture for a major user facing product",
+      "Created a complete application for internal admin usage",
+      "Created the design of the application in addition to development of both Frontend and Backend",
+      "Created coding guidelines and ensured implementation of the same",
+      "Mentoring Graduate Trainees",
+      "Optimization and improvement of the development life cycle"
+    ]
+  }, {
+    "details": {
+      "designation": "Senior Software Engineer",
+      "companyName": "Just Dial Limited",
+      "duration": "08/2016 - 02/2019",
+      "location": "Mumbai",
+      "companyOverview": "Ecommerce company"
+    },
+    "responsiblities": [
+      "Development and design of JD Omni Website",
+      "Analysis and estimation of requirements and making an architecture for the same",
+      "Primary front end developer in development of sign up flows of the website",
+      "Improving code for better scalability and use of best practices",
+      "Involved in development of CMS features of the Website",
+      "Developed React Component for the Content Management System"
+    ]
+  }]
+}

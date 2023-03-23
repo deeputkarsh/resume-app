@@ -1,0 +1,53 @@
+{
+  "title": "PROJECTS",
+  "list": [{
+    "key":"makeo",
+    "details": {
+      "title": "MakeO (AMPA Orthodontics)",
+      "duration": "09/2021 - Ongoing",
+      "location": "Mumbai",
+      "link": "https://makeo.app"
+    },
+    "role": "Lead Cloud Architect",
+    "technologies": "AWS Cloud, NodeJs, Serverless, NextJs, MongoDB",
+    "descriptions": [
+      "There are four frontend application developed using NextJs",
+      "More than 10 backend microservices developed in NestJs",
+      "Many Serverless application which use AWS services like Lambda, API Gateway, SQS, DynamoDB",
+      "Create and Maintain Infrastructure as Code using Cloudformation and AWS CDK"
+    ]
+  }, {
+    "key":"tagic",
+    "details": {
+      "title": "Tataaig.com (TATA AIG)",
+      "duration": "09/2020 - 09/2021",
+      "location": "Mumbai",
+      "link": "https://www.tataaig.com"
+    },
+    "role": "Full Stack Developer",
+    "technologies": "NodeJs, Serverless, NextJs, MongoDB",
+    "descriptions": []
+  }, {
+    "key":"hdfc",
+    "details": {
+      "title": "LifeEasy and Life99 (HDFC Life)",
+      "duration": "02/2019 - 09/2020",
+      "location": "Mumbai",
+      "link": "https://lifeeasy.hdfclife.com"
+    },
+    "role": "Full Stack Developer",
+    "technologies": "NodeJs, Express, MongoDB, React, Redux, SCSS",
+    "descriptions": []
+  }, {
+    "key":"jd",
+    "details": {
+      "title": "Omni (Just Dial)",
+      "duration": "08/2016 - 02/2019",
+      "location": "Mumbai",
+      "link": "https://www.jdomni.com"
+    },
+    "role": "Frontend Developer",
+    "technologies": "AngularJS, ReactJS, NodeJS",
+    "descriptions": []
+  }]
+}

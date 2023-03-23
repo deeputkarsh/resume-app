@@ -1,0 +1,26 @@
+.App {
+  background-color: var(--white);
+  max-width: 1240px;
+  margin: auto;
+  // padding: 40px 30px;
+  a {
+    text-decoration: none;
+    color: unset;
+    outline: none;
+    // color: var(--blue);
+  }
+}
+
+.resume-body {
+  margin-top: 20px;
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .left-sections {
+    width: 60%;
+  }
+  .right-sections {
+    width: calc(40% - 50px);
+  }
+}
