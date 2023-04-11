@@ -3,41 +3,49 @@ import Achievements from '@resume-app/components/Achievements';
 import CorporateExp from '@resume-app/components/CorporateExp';
 import Head from '@resume-app/components/Head';
 import TechStack from '@resume-app/components/TechStack';
-import Projects from '@resume-app/components/Projects';
 import Education from '@resume-app/components/Education';
 import Sections from '@resume-app/components/Sections';
 
-function App(props:any) {
+function SinglePageResume(props:any) {
   const {
     PersonalDets,
     AchievementsData,
-    ProjectsData,
     CorporateExpData,
     EducationData,
     TechStackData
   } = props
+  interface listItem {
+    title: string,
+    items: string[],
+  }
+  
+  TechStackData.list = TechStackData.list.map(({title, items}:listItem) => {
+    const filteredItems = items.filter((item)=>![
+      'Application Load Balancer',
+      // 'JavaScript',
+      'Cloudflare',
+      'Route53'
+    ].includes(item))
+    return {title,items:filteredItems}
+  })
   const leftSection = [{
     key: 'CorporateExp',
     Component: CorporateExp,
     data: CorporateExpData,
-  }, /* {
-    key: 'TechStack',
-    Component: TechStack,
-    data: TechStackData,
-  } */];
+  }];
   const rightSection = [{
     key: 'Achievements',
     Component: Achievements,
-    data: AchievementsData,
+    data: {...AchievementsData, list: AchievementsData.list.slice(0,3)},
   }, {
-    key: 'Projects',
-    Component: Projects,
-    data: ProjectsData,
-  }, /* {
+    key: 'TechStack',
+    Component: TechStack,
+    data: TechStackData,
+  }, {
     key: 'Education',
     Component: Education,
     data: EducationData,
-  } */];
+  }];
   return (
     <div className={styles["App"]}>
       <Head data={PersonalDets} />
@@ -64,17 +72,9 @@ function App(props:any) {
             }
           </div>
         </div>
-        <div className={styles["row"]}>
-          <div className={styles["left-sections"]}>
-            <Sections Component={TechStack} data={TechStackData} />
-          </div>
-          <div className={styles["right-sections"]}>
-            <Sections Component={Education} data={EducationData} />
-          </div>
-        </div>
       </div>
     </div>
   );
 }
 
-export default App;
+export default SinglePageResume;

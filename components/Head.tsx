@@ -6,33 +6,47 @@ import mail from '@resume-app/images/mail.png'
 import linkBlue from '@resume-app/images/link-blue.png'
 import locationBlue from '@resume-app/images/location-blue.png'
 
+interface propType { data: any, options?: any }
 
-function Head() {
+function Head({data, options} : propType) {
+  const {
+    name, title,
+    phone, email,
+    website, location:place
+  } = data;
+  
+  const {
+    noTitle = false,
+    noWebsite = false,
+    containerClass = ''
+  } = options || {};
+
   return (
-    <header className={styles["header"]}>
-      <div className={styles["name"]}>UTKARSH DEEP</div>
-      <div className={styles["title"]}>DevOps Lead</div>
+    <header className={`${styles.header} ${containerClass}`}>
+      <div className={styles["name"]}>{name}</div>
+      {noTitle ? '' : <div className={styles["title"]}>{title}</div>}
       <div className={styles["contact-section"]}>
         <div className={styles["phone"]}>
           <Icon className={styles["icon"]} src={call} alt="Call" />
           {' '}
-          <a href="tel:+16729712711">+1 672-971-2711</a>
+          <a href={`tel:${phone}`}>{phone}</a>
 
         </div>
         <div className={styles["email"]}>
           <Icon className={styles["icon"]} src={mail} alt="E-mail" />
           {' '}
-          <a href="mailto:utkarshdeep@outlook.com">utkarshdeep@outlook.com</a>
+          <a href={`mailto:${email}`}>{email}</a>
         </div>
+        {noWebsite ? '' :
         <div className={styles["website"]}>
           <Icon className={styles["icon"]} src={linkBlue} alt="Link" />
           {' '}
-          <a href="https://github.com/deeputkarsh">https://github.com/deeputkarsh</a>
+          <a href={website}>{website}</a>
         </div>
+        }
         <div className={styles["location"]}>
           <Icon className={styles["icon"]} src={locationBlue} alt="Location" />
-          {' '}
-          Vancouver, BC
+          {' '+place}
         </div>
       </div>
     </header>

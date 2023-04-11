@@ -3,7 +3,7 @@
   "list": [{
     "title":"Cloud",
     "items": [
-      "AWS Cloudformation",
+      "Cloudformation",
       "AWS CDK",
       "CodePipeline",
       "CodeBuild",

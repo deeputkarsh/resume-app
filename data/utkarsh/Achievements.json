@@ -1,6 +1,13 @@
 {
   "title": "CERTIFICATIONS",
   "list": [{
+    "title": "AWS Certified SysOps Administrator Associate",
+    "details": [
+      "Validation Number: HVSXD2S17MBE1XGW",
+      "Issued: April 2023",
+      "Valid till: April 2026"
+    ]
+  }, {
     "title": "AWS Certified Developer Associate",
     "details": [
       "Validation Number: C9S8M1YCZMF4QYSV",
@@ -19,7 +26,7 @@
     "details": [
       "Validation Number: C5ZXC9MJK1QQQPST",
       "Issued: Mar 2021",
-      "Valid till: Feb 2026"
+      "Valid till: April 2026"
     ]
   }]
 }

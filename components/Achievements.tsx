@@ -1,7 +1,6 @@
 import styles from '@resume-app/styles/achievements.module.scss';
 import Icon from './Icon';
 import star from '@resume-app/images/star.png'
-import Image from 'next/image';
 
 interface propType { list: any }
 interface listItem {
