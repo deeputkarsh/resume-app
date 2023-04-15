@@ -5,6 +5,7 @@ import Head from '@resume-app/components/Head';
 import TechStack from '@resume-app/components/TechStack';
 import Education from '@resume-app/components/Education';
 import Sections from '@resume-app/components/Sections';
+import { caData } from '@resume-app/data/utkarsh';
 
 function SinglePageResume(props:any) {
   const {
@@ -13,21 +14,8 @@ function SinglePageResume(props:any) {
     CorporateExpData,
     EducationData,
     TechStackData
-  } = props
-  interface listItem {
-    title: string,
-    items: string[],
-  }
-  
-  TechStackData.list = TechStackData.list.map(({title, items}:listItem) => {
-    const filteredItems = items.filter((item)=>![
-      'Application Load Balancer',
-      // 'JavaScript',
-      'Cloudflare',
-      'Route53'
-    ].includes(item))
-    return {title,items:filteredItems}
-  })
+  } = props.caData
+
   const leftSection = [{
     key: 'CorporateExp',
     Component: CorporateExp,
@@ -36,7 +24,7 @@ function SinglePageResume(props:any) {
   const rightSection = [{
     key: 'Achievements',
     Component: Achievements,
-    data: {...AchievementsData, list: AchievementsData.list.slice(0,3)},
+    data: AchievementsData,
   }, {
     key: 'TechStack',
     Component: TechStack,
@@ -78,3 +66,9 @@ function SinglePageResume(props:any) {
 }
 
 export default SinglePageResume;
+
+export async function getStaticProps() {
+  return {
+    props: {caData}, // will be passed to the page component as props
+  }
+}
