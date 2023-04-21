@@ -1,0 +1,32 @@
+{
+  "title": "CERTIFICATIONS",
+  "list": [{
+    "title": "AWS Certified SysOps Administrator Associate",
+    "details": [
+      "Validation Number: HVSXD2S17MBE1XGW",
+      "Issued: April 2023",
+      "Valid till: April 2026"
+    ]
+  }, {
+    "title": "AWS Certified Developer Associate",
+    "details": [
+      "Validation Number: C9S8M1YCZMF4QYSV",
+      "Issued: Feb 2023",
+      "Valid till: Feb 2026"
+    ]
+  }, {
+    "title": "AWS Certified Solutions Architect Associate",
+    "details": [
+      "Validation Number: 49NK8XRBP2B415GY",
+      "Issued: Jan 2022",
+      "Valid till: Jan 2025"
+    ]
+  }, {
+    "title": "AWS Certified Cloud Practitioner",
+    "details": [
+      "Validation Number: C5ZXC9MJK1QQQPST",
+      "Issued: Mar 2021",
+      "Valid till: April 2026"
+    ]
+  }]
+}

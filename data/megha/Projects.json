@@ -10,7 +10,12 @@
     },
     "role": "Lead Cloud Architect",
     "technologies": "AWS Cloud, NodeJs, Serverless, NextJs, MongoDB",
-    "descriptions": []
+    "descriptions": [
+      "There are four frontend application developed using NextJs",
+      "More than 10 backend microservices developed in NestJs",
+      "Many Serverless application which use AWS services like Lambda, API Gateway, SQS, DynamoDB",
+      "Create and Maintain Infrastructure as Code using Cloudformation and AWS CDK"
+    ]
   }, {
     "key":"tagic",
     "details": {

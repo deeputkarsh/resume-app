@@ -1,17 +1,17 @@
-import Image, { StaticImageData } from "next/image";
+import Image, {type StaticImageData} from 'next/image';
 
-interface propType {
-  className: string,
-  src: StaticImageData,
-  alt: string
-}
+type PropType = {
+	className: string;
+	src: StaticImageData;
+	alt: string;
+};
 
-function Icon({ className, src, alt }: propType) {
-  return (
-    <div className={className}>
-      <Image fill src={src} alt={alt} />
-    </div>
-  )
+function Icon({className, src, alt}: PropType) {
+	return (
+		<div className={className}>
+			<Image fill src={src} alt={alt} />
+		</div>
+	);
 }
 
 export default Icon;

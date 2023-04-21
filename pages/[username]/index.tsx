@@ -7,8 +7,9 @@ import Projects from '@resume-app/components/Projects';
 import Education from '@resume-app/components/Education';
 import Sections from '@resume-app/components/Sections';
 import Summary from '@resume-app/components/Summary';
-import {type UserData} from '@resume-app/data/types';
+import {type AvailableUserNames, type UserData} from '@resume-app/data/types';
 import axios from 'axios';
+import {getAllUserPaths} from '@resume-app/utils/helpers';
 
 function App(props: {userData: UserData}) {
 	const {
@@ -89,7 +90,11 @@ function App(props: {userData: UserData}) {
 
 export default App;
 
-export const getStaticProps = async () => {
-	const userData = (await axios.get<UserData>('/api/user/utkarsh')).data;
-	return {props: {userData}};
+export const getStaticPaths = getAllUserPaths;
+
+export const getStaticProps = async ({params}: {params: {username: AvailableUserNames}}) => {
+	const userData = (await axios.get<UserData>(`/api/user/${params.username}`)).data;
+	return {
+		props: {userData},
+	};
 };

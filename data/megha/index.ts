@@ -9,12 +9,11 @@ import techStackData from './TechStack.json';
 import coverLetterData from './cover-letter.json';
 import {type ListItem, type UserData} from '../types';
 
-const defaultData = {
+const defaultData: UserData = {
 	personalDetails,
 	achievementsData,
 	projectsData,
 	corporateExpData,
-	corporateExpDataDev,
 	corporateExpWtProjectData,
 	educationData,
 	techStackData,
@@ -22,7 +21,10 @@ const defaultData = {
 };
 
 export const caData = {
-	...defaultData,
+	personalDetails,
+	corporateExpData,
+	corporateExpDataDev,
+	educationData,
 	achievementsData: {...achievementsData, list: achievementsData.list.slice(0, 3)},
 	techStackData: {
 		...techStackData,

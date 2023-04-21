@@ -1,9 +1,9 @@
 @import "mixin";
 .list-items {
   padding: 10px 0;
-  border-bottom: 1px dashed #333;
-  &:last-of-type {
-    border-bottom: none;
+  border-top: 1px dashed #333;
+  &.first {
+    border-top: none;
   }
   ul {
     margin: 0;

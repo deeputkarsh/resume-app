@@ -3,37 +3,25 @@ import Achievements from '@resume-app/components/Achievements';
 import CorporateExp from '@resume-app/components/CorporateExp';
 import Head from '@resume-app/components/Head';
 import TechStack from '@resume-app/components/TechStack';
-import Projects from '@resume-app/components/Projects';
 import Education from '@resume-app/components/Education';
 import Sections from '@resume-app/components/Sections';
-import Summary from '@resume-app/components/Summary';
-import {type UserData} from '@resume-app/data/types';
+import {getAllUserPaths} from '@resume-app/utils/helpers';
+import {type AvailableUserNames, type UserData} from '@resume-app/data/types';
 import axios from 'axios';
 
-function App(props: {userData: UserData}) {
+function DeveloperResume(props: {userData: UserData}) {
 	const {
 		personalDetails,
 		achievementsData,
-		projectsData,
 		corporateExpData,
 		educationData,
 		techStackData,
 	} = props.userData;
+
 	const leftSection = [{
-		key: 'Summary',
-		Component: Summary,
-		data: {
-			title: 'SUMMARY',
-			list: [personalDetails.summary],
-		},
-	}, {
 		key: 'CorporateExp',
 		Component: CorporateExp,
 		data: corporateExpData,
-	}, {
-		key: 'Projects',
-		Component: Projects,
-		data: projectsData,
 	}];
 	const rightSection = [{
 		key: 'Achievements',
@@ -65,15 +53,7 @@ function App(props: {userData: UserData}) {
 					</div>
 					<div className={styles['right-sections']}>
 						{
-							rightSection.map(({key, Component, data}) => key === 'Education' ? <>
-								<br/>
-								<br/>
-								<Sections
-									key={key}
-									Component={Component}
-									data={data}
-								/>
-							</> : <Sections
+							rightSection.map(({key, Component, data}) => <Sections
 								key={key}
 								Component={Component}
 								data={data}
@@ -87,9 +67,13 @@ function App(props: {userData: UserData}) {
 	);
 }
 
-export default App;
+export default DeveloperResume;
 
-export const getStaticProps = async () => {
-	const userData = (await axios.get<UserData>('/api/user/utkarsh')).data;
-	return {props: {userData}};
+export const getStaticPaths = getAllUserPaths;
+
+export const getStaticProps = async ({params}: {params: {username: AvailableUserNames}}) => {
+	const userData = (await axios.get<UserData>(`/api/user/${params.username}?caData=true`)).data;
+	return {
+		props: {userData},
+	};
 };
