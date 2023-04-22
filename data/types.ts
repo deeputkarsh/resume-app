@@ -8,6 +8,7 @@ type CoverLetterData = {
 };
 export type SectionData = {
 	title: string;
+	list: any[];
 };
 type TechStackData = {
 	list: ListItem[];
@@ -20,14 +21,16 @@ export type PersonalDetails = {
 	phone: string; email: string;
 	website: string; location: string;
 	summary: string;
+	summaryDev?: string;
 };
 export type UserData = {
 	personalDetails: PersonalDetails;
 	achievementsData: AchievementsData;
-	projectsData: Record<string, unknown>;
-	corporateExpData: Record<string, unknown>;
-	corporateExpWtProjectData: Record<string, unknown>;
-	educationData: Record<string, unknown>;
+	projectsData: SectionData;
+	corporateExpData: SectionData;
+	corporateExpDataDev: SectionData;
+	corporateExpWtProjectData: SectionData;
+	educationData: SectionData;
 	techStackData: TechStackData;
 	coverLetterData: CoverLetterData;
 };

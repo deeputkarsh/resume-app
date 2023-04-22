@@ -39,7 +39,7 @@ function ExpItem({details, responsiblities}: ListItem, index: number) {
 }
 
 function CorporateExp({list}: PropType) {
-	return list.map(ExpItem);
+	return <>{list.map(ExpItem)}</>;
 }
 
 export default CorporateExp;

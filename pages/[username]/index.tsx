@@ -67,8 +67,8 @@ function App(props: {userData: UserData}) {
 					<div className={styles['right-sections']}>
 						{
 							rightSection.map(({key, Component, data}) => key === 'Education' ? <>
-								<br/>
-								<br/>
+								<br key={'ed-0'}/>
+								<br key={'ed-1'}/>
 								<Sections
 									key={key}
 									Component={Component}

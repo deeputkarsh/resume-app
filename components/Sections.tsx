@@ -1,10 +1,10 @@
 import styles from '@resume-app/styles/section.module.scss';
 import {type SectionData} from '@resume-app/data/types';
-import {type ComponentType} from 'react';
+import {type FunctionComponent} from 'react';
 
 type PropType = {
-	Component: ComponentType<{list: any[]}>;
-	data: SectionData & {list: any[]};
+	Component: FunctionComponent<{list: any[]}>;
+	data: SectionData;
 };
 function Sections({Component, data}: PropType) {
 	const {title, list} = data;

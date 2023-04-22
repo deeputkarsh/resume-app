@@ -19,7 +19,7 @@ function SubSection({title, items}: ListItem, index: number) {
 }
 
 function TechStack({list}: PropType) {
-	return list.map(SubSection);
+	return <>{list.map(SubSection)}</>;
 }
 
 export default TechStack;

@@ -1,5 +1,6 @@
-import {type UserData} from '@resume-app/data/types';
+import {type AvailableUserNames, type UserData} from '@resume-app/data/types';
 import styles from '@resume-app/styles/cover-letter.module.scss';
+import {getAllUserPaths} from '@resume-app/utils/helpers';
 import axios from 'axios';
 
 function CoverLetter(props: {userData: UserData}) {
@@ -26,7 +27,11 @@ function CoverLetter(props: {userData: UserData}) {
 
 export default CoverLetter;
 
-export const getStaticProps = async () => {
-	const userData = (await axios.get<UserData>('/api/user/utkarsh')).data;
-	return {props: {userData}};
+export const getStaticPaths = getAllUserPaths;
+
+export const getStaticProps = async ({params}: {params: {username: AvailableUserNames}}) => {
+	const userData = (await axios.get<UserData>(`/api/user/${params.username}`)).data;
+	return {
+		props: {userData},
+	};
 };

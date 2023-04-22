@@ -1,5 +1,4 @@
 import styles from '@resume-app/styles/education.module.scss';
-import {type ReactNode} from 'react';
 
 type ListItem = {
 	courseName: string;
@@ -12,13 +11,13 @@ type PropType = {
 };
 
 function Education({list}: PropType) {
-	return list.map(({courseName, institute, duration}: ListItem, index: number) => (
+	return <>{list.map(({courseName, institute, duration}: ListItem, index: number) => (
 		<div className={`${styles['list-items']} ${index === 0 ? styles.first : ''} ${styles['edu-item']}`} key={courseName}>
 			<div className={styles['course-name']}>{courseName}</div>
 			<div className={styles.institute}>{institute}</div>
 			<div className={styles.duration}>{duration}</div>
 		</div>
-	));
+	))}</>;
 }
 
 export default Education;

@@ -8,20 +8,33 @@ import Sections from '@resume-app/components/Sections';
 import {getAllUserPaths} from '@resume-app/utils/helpers';
 import {type AvailableUserNames, type UserData} from '@resume-app/data/types';
 import axios from 'axios';
+import Summary from '@resume-app/components/Summary';
+import Projects from '@resume-app/components/Projects';
 
 function DeveloperResume(props: {userData: UserData}) {
 	const {
 		personalDetails,
 		achievementsData,
+		projectsData,
 		corporateExpDataDev,
 		educationData,
 		techStackData,
 	} = props.userData;
-
 	const leftSection = [{
+		key: 'Summary',
+		Component: Summary,
+		data: {
+			title: 'SUMMARY',
+			list: [personalDetails.summaryDev],
+		},
+	}, {
 		key: 'CorporateExp',
 		Component: CorporateExp,
 		data: corporateExpDataDev,
+	}, {
+		key: 'Projects',
+		Component: Projects,
+		data: projectsData,
 	}];
 	const rightSection = [{
 		key: 'Achievements',
@@ -53,7 +66,15 @@ function DeveloperResume(props: {userData: UserData}) {
 					</div>
 					<div className={styles['right-sections']}>
 						{
-							rightSection.map(({key, Component, data}) => <Sections
+							rightSection.map(({key, Component, data}) => key === 'Education' ? <>
+								<br key={'ed-0'}/>
+								<br key={'ed-1'}/>
+								<Sections
+									key={key}
+									Component={Component}
+									data={data}
+								/>
+							</> : <Sections
 								key={key}
 								Component={Component}
 								data={data}
@@ -72,7 +93,7 @@ export default DeveloperResume;
 export const getStaticPaths = getAllUserPaths;
 
 export const getStaticProps = async ({params}: {params: {username: AvailableUserNames}}) => {
-	const userData = (await axios.get<UserData>(`/api/user/${params.username}?caData=true`)).data;
+	const userData = (await axios.get<UserData>(`/api/user/${params.username}`)).data;
 	return {
 		props: {userData},
 	};

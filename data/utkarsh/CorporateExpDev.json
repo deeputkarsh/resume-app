@@ -5,34 +5,37 @@
       "designation": "DevOps Lead",
       "companyName": "MakeO (AMPA Orthodontics pvt ltd)",
       "duration": "09/2021 - Ongoing",
-      "location": "Mumbai",
+      "location": "Remote",
       "companyOverview": "Health-tech company which provides at home Teeth Aligners and skin care service"
     },
     "responsiblities": [
+      "Led the digital transformation, from web applications hosted EC2 applications to serverless applications",
       "Responsible for creating and maintaining the Infrastructure of web application in AWS cloud",
       "Development of NestJs based rest api microservices",
       "Created and deployed serverless applications having Lambda functions, API Gateway, SQS and S3 using Serverless Framework",
       "Development of NextJs frontend applications",
+      "Implemented CMS api caching to reduce NextJs application's build time from 15 minutes to 6 minutes",
       "Ensuring the web applications meet the industrial security standards",
       "Setup CI/CD for the development team using Github, Codepipeline, Codebuild and CodeDeploy",
       "Migrated all applications from EC2 to ECS (Fargate)",
-      "Helped setup infrastructure for business launch in the UAE to ensure data residency compliance"
+      "Helped setup infrastructure for business launch in the UAE to ensure data residency compliance",
+      "Introduced Cloudformation and AWS CDK with Typescript for managing infrastructure as code"
     ]
   }, {
     "details": {
       "designation": "Senior Developer - Digital Marketing",
       "companyName": "Tata AIG General Insurance Company Ltd.",
       "duration": "09/2020 - 09/2021",
-      "location": "Mumbai",
+      "location": "Remote",
       "companyOverview": "One of the leading companies in General Insurance sector in India"
     },
     "responsiblities": [
       "Development of serverless microservices with API Gateway and Lambda functions",
       "Setup infrastructure for private npm registry with Verdaccio",
-      "Created and published npm packages in the registry",
+      "Conducted sessions to help developers learn to create and published npm packages for code modularity",
       "Created coding guidelines and git flow management",
-      "Mentoring and providing guidance to Interns",
-      "Optimization and improvement of the development life cycle"
+      "Mentored and providing guidance to 3 Interns",
+      "Optimization and improvement of the development life cycle with AWS Codecommit"
     ]
   }, {
     "details": {
@@ -43,13 +46,12 @@
       "companyOverview": "One of the leading companies in Life Insurance sector in India"
     },
     "responsiblities": [
-      "Development of nodeJs, express framework based microservices apis for consumption in various applications",
-      "Designing project architecture for a major user facing product",
-      "Created a complete application for internal admin usage",
-      "Created the design of the application in addition to development of both Frontend and Backend",
+      "Designed and Developed online claims portal to facilitate claim disbursement within 24 hours for any low-risk case",
+      "ReactJs frontend and expressJS REST APIs deployed on ECS",
+      "Created a functional backend admin portal independently including UI design and development",
       "Created coding guidelines and ensured implementation of the same",
       "Mentoring Graduate Trainees",
-      "Optimization and improvement of the development life cycle"
+      "Optimization and improvement of the development life cycle with Bitbucket"
     ]
   }, {
     "details": {
@@ -62,8 +64,8 @@
     "responsiblities": [
       "Development and design of JD Omni Website",
       "Analysis and estimation of requirements and making an architecture for the same",
-      "Primary front end developer in development of sign up flows of the website",
-      "Improving code for better scalability and use of best practices",
+      "Developed the frontend for login, signup flows of the website",
+      "Migrated php code to Server side rendered ReactJS.",
       "Involved in development of CMS features of the Website",
       "Developed React Component for the Content Management System"
     ]

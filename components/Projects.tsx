@@ -20,7 +20,7 @@ type PropType = {
 };
 
 function Projects({list}: PropType) {
-	return list.map(({
+	return <>{list.map(({
 		key, details, role, technologies, descriptions,
 	}: ListItem, index: number) => (
 		<div className={`${styles['list-items']} ${index === 0 ? styles.first : ''} ${styles.projects}`} key={key}>
@@ -42,7 +42,7 @@ function Projects({list}: PropType) {
 				{descriptions.map(item => <li key={item}>{item}</li>)}
 			</ul>
 		</div>
-	));
+	))}</>;
 }
 
 export default Projects;

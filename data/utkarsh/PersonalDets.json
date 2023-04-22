@@ -5,5 +5,6 @@
   "email": "utkarshdeep@outlook.com",
   "website": "https://www.linkedin.com/in/utkarshdeep-sa",
   "location": "Vancouver, BC",
-  "summary": "AWS Certified Software Engineer with over 6 years experience in Software Development with Typescript and Javascript and 4 years with AWS and DevOps. Have led or been part of digital transformation for three organizations."
+  "summary": "AWS Certified Software Engineer with over 6 years experience in Software Development with Typescript & Javascript and over 4 years experience with AWS and DevOps. Have led or been part of digital transformation for three organizations.",
+  "summaryDev": "AWS Certified Software Engineer with over 6 years experience in Software Development with Typescript & Javascript and over 4 years experience with AWS Services like Lambda, S3, SQS, EventBridge, RDS, etc. Have led or been part of digital transformation for three organizations."
 }
