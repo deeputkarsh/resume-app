@@ -19,6 +19,7 @@ function App(props: {userData: UserData}) {
 		educationData,
 		techStackData,
 	} = props.userData;
+
 	const leftSection = [{
 		key: 'Summary',
 		Component: Summary,

@@ -24,8 +24,7 @@ export type PersonalDetails = {
 	name: string; title: string;
 	phone: string; email: string;
 	website: string; location: string;
-	summary: string;
-	summaryDev?: string;
+	summary: string; otherLinks: CmsStringList[];
 };
 export type UserData = {
 	personalDetails: PersonalDetails;
