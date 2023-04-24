@@ -1,5 +1,5 @@
 
-import {type UserData} from '@resume-app/data/types';
+import {type UserData} from '@resume-app/types';
 import cmsClient from './cms-client';
 
 type IdResult = {

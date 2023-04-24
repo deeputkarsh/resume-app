@@ -1,5 +1,5 @@
 import styles from '@resume-app/styles/section.module.scss';
-import {type SectionData} from '@resume-app/data/types';
+import {type SectionData} from '@resume-app/types';
 import {type FunctionComponent} from 'react';
 
 type PropType = {

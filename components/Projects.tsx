@@ -2,7 +2,7 @@ import styles from '@resume-app/styles/projects.module.scss';
 import DuraLoc from './DuraLoc';
 import linkImg from '@resume-app/images/link.png';
 import Icon from './Icon';
-import {type CmsStringList} from '@resume-app/data/types';
+import {type CmsStringList} from '@resume-app/types';
 
 type ListItem = {
 	key: string;

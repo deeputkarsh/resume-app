@@ -7,7 +7,7 @@ import Projects from '@resume-app/components/Projects';
 import Education from '@resume-app/components/Education';
 import Sections from '@resume-app/components/Sections';
 import Summary from '@resume-app/components/Summary';
-import {type UserData} from '@resume-app/data/types';
+import {type UserData} from '@resume-app/types';
 import {getAllUserPaths, getSpecificUserData} from '@resume-app/utils/helpers';
 
 function App(props: {userData: UserData}) {

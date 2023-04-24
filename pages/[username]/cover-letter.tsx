@@ -1,4 +1,4 @@
-import {type CoverLetterData, type UserData} from '@resume-app/data/types';
+import {type CoverLetterData, type UserData} from '@resume-app/types';
 import styles from '@resume-app/styles/cover-letter.module.scss';
 import {getAllUserPaths} from '@resume-app/utils/helpers';
 

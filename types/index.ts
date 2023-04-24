@@ -37,5 +37,3 @@ export type UserData = {
 	techStackData: TechStackData;
 	coverLetterData: CoverLetterData;
 };
-
-export type AvailableUserNames = 'utkarsh' | 'megha';

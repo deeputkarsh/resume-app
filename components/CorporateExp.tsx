@@ -1,6 +1,6 @@
 import styles from '@resume-app/styles/experience.module.scss';
 import DuraLoc from './DuraLoc';
-import {type CmsStringList} from '@resume-app/data/types';
+import {type CmsStringList} from '@resume-app/types';
 
 type ListItem = {
 	details: {

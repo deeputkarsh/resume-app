@@ -1,7 +1,7 @@
 import styles from '@resume-app/styles/achievements.module.scss';
 import Icon from './Icon';
 import star from '@resume-app/images/star.png';
-import {type CmsStringList} from '@resume-app/data/types';
+import {type CmsStringList} from '@resume-app/types';
 
 type ListItem = {
 	title: string;

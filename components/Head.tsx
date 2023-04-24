@@ -5,7 +5,7 @@ import call from '@resume-app/images/call.png';
 import mail from '@resume-app/images/mail.png';
 import linkBlue from '@resume-app/images/link-blue.png';
 import locationBlue from '@resume-app/images/location-blue.png';
-import {type PersonalDetails} from '@resume-app/data/types';
+import {type PersonalDetails} from '@resume-app/types';
 
 type PropType = {
 	data: PersonalDetails;

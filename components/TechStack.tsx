@@ -1,4 +1,4 @@
-import {type CmsStringList} from '@resume-app/data/types';
+import {type CmsStringList} from '@resume-app/types';
 import styles from '@resume-app/styles/tech-stack.module.scss';
 
 type ListItem = {
