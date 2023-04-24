@@ -1,8 +1,9 @@
+import {type CmsStringList} from '@resume-app/data/types';
 import styles from '@resume-app/styles/tech-stack.module.scss';
 
 type ListItem = {
 	title: string;
-	items: string[];
+	items: CmsStringList[];
 };
 
 type PropType = {
@@ -13,7 +14,7 @@ function SubSection({title, items}: ListItem, index: number) {
 	return (
 		<div className={`${styles['list-items']} ${index === 0 ? styles.first : ''} ${styles['tech-stack-section']}`} key={title}>
 			<div className={styles.title}>{title}</div>
-			<div className={styles['tile-container']}>{items.map(item => (<div className={styles.tiles} key={item}>{item}</div>))}</div>
+			<div className={styles['tile-container']}>{items.map(({id, value}) => (<div className={styles.tiles} key={id}>{value}</div>))}</div>
 		</div>
 	);
 }

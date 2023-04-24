@@ -1,5 +1,6 @@
 import styles from '@resume-app/styles/experience.module.scss';
 import DuraLoc from './DuraLoc';
+import {type CmsStringList} from '@resume-app/data/types';
 
 type ListItem = {
 	details: {
@@ -9,7 +10,7 @@ type ListItem = {
 		location: string;
 		companyOverview: string;
 	};
-	responsiblities: string[];
+	responsiblities: CmsStringList[];
 };
 type PropType = {
 	list: ListItem[];
@@ -32,7 +33,7 @@ function ExpItem({details, responsiblities}: ListItem, index: number) {
 			</div>
 			<div className={styles['company-desc']}>{companyOverview}</div>
 			<ul>
-				{responsiblities.map(item => (<li key={item}>{item}</li>))}
+				{responsiblities.map(({id, value}) => (<li key={id}>{value}</li>))}
 			</ul>
 		</div>
 	);

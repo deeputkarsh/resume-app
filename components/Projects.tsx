@@ -2,6 +2,7 @@ import styles from '@resume-app/styles/projects.module.scss';
 import DuraLoc from './DuraLoc';
 import linkImg from '@resume-app/images/link.png';
 import Icon from './Icon';
+import {type CmsStringList} from '@resume-app/data/types';
 
 type ListItem = {
 	key: string;
@@ -13,7 +14,7 @@ type ListItem = {
 	};
 	role: string;
 	technologies: string;
-	descriptions: string[];
+	descriptions: CmsStringList[];
 };
 type PropType = {
 	list: ListItem[];
@@ -39,7 +40,7 @@ function Projects({list}: PropType) {
 					<strong>Technologies: </strong>
 					{technologies}
 				</li>
-				{descriptions.map(item => <li key={item}>{item}</li>)}
+				{descriptions.map(({id, value}) => <li key={id}>{value}</li>)}
 			</ul>
 		</div>
 	))}</>;

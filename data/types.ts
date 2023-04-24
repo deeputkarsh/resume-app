@@ -1,8 +1,12 @@
+export type CmsStringList = {
+	id: number;
+	value: string;
+};
 export type ListItem = {
 	title: string;
-	items: string[];
+	items: CmsStringList[];
 };
-type CoverLetterData = {
+export type CoverLetterData = {
 	HiringManName: string;
 	jobListingName: string;
 };
@@ -14,7 +18,7 @@ type TechStackData = {
 	list: ListItem[];
 } & SectionData;
 type AchievementsData = {
-	list: Array<{title: string; details: string[]}>;
+	list: Array<{title: string; details: CmsStringList[]}>;
 } & SectionData;
 export type PersonalDetails = {
 	name: string; title: string;

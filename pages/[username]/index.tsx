@@ -7,9 +7,8 @@ import Projects from '@resume-app/components/Projects';
 import Education from '@resume-app/components/Education';
 import Sections from '@resume-app/components/Sections';
 import Summary from '@resume-app/components/Summary';
-import {type AvailableUserNames, type UserData} from '@resume-app/data/types';
-import axios from 'axios';
-import {getAllUserPaths} from '@resume-app/utils/helpers';
+import {type UserData} from '@resume-app/data/types';
+import {getAllUserPaths, getSpecificUserData} from '@resume-app/utils/helpers';
 
 function App(props: {userData: UserData}) {
 	const {
@@ -92,9 +91,4 @@ export default App;
 
 export const getStaticPaths = getAllUserPaths;
 
-export const getStaticProps = async ({params}: {params: {username: AvailableUserNames}}) => {
-	const userData = (await axios.get<UserData>(`/api/user/${params.username}`)).data;
-	return {
-		props: {userData},
-	};
-};
+export const getStaticProps = getSpecificUserData;

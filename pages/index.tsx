@@ -8,7 +8,7 @@ import Education from '@resume-app/components/Education';
 import Sections from '@resume-app/components/Sections';
 import Summary from '@resume-app/components/Summary';
 import {type UserData} from '@resume-app/data/types';
-import axios from 'axios';
+import cmsClient from '@resume-app/utils/cms-client';
 
 function App(props: {userData: UserData}) {
 	const {
@@ -89,7 +89,9 @@ function App(props: {userData: UserData}) {
 
 export default App;
 
-export const getStaticProps = async () => {
-	const userData = (await axios.get<UserData>('/api/user/utkarsh')).data;
-	return {props: {userData}};
+export const getStaticProps = async ({preview}: {preview: boolean}) => {
+	const userData = (await cmsClient.get(`${cmsClient.apiList.resumeUsers}/1`, preview)) as UserData;
+	return {
+		props: {userData},
+	};
 };

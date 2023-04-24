@@ -1,14 +1,14 @@
-import {type AvailableUserNames, type UserData} from '@resume-app/data/types';
+import {type CoverLetterData, type UserData} from '@resume-app/data/types';
 import styles from '@resume-app/styles/cover-letter.module.scss';
 import {getAllUserPaths} from '@resume-app/utils/helpers';
-import axios from 'axios';
 
-function CoverLetter(props: {userData: UserData}) {
+import {type ParsedUrl} from 'next/dist/shared/lib/router/utils/parse-url';
+
+function CoverLetter(props: {coverLetterData: CoverLetterData}) {
 	const {
-		coverLetterData,
-	} = props.userData;
-
-	const {HiringManName, jobListingName} = coverLetterData;
+		HiringManName,
+		jobListingName,
+	} = props.coverLetterData;
 
 	return (
 		<div className={styles.container}>
@@ -29,9 +29,14 @@ export default CoverLetter;
 
 export const getStaticPaths = getAllUserPaths;
 
-export const getStaticProps = async ({params}: {params: {username: AvailableUserNames}}) => {
-	const userData = (await axios.get<UserData>(`/api/user/${params.username}`)).data;
+export const getServerSideProps = async (context: ParsedUrl) => {
+	const {
+		HiringManName = 'Hiring Manager',
+		jobListingName = 'Devops Engineer',
+	} = context.query;
 	return {
-		props: {userData},
+		props: {
+			coverLetterData: {HiringManName, jobListingName},
+		},
 	};
 };

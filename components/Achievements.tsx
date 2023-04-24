@@ -1,10 +1,11 @@
 import styles from '@resume-app/styles/achievements.module.scss';
 import Icon from './Icon';
 import star from '@resume-app/images/star.png';
+import {type CmsStringList} from '@resume-app/data/types';
 
 type ListItem = {
 	title: string;
-	details: string[];
+	details: CmsStringList[];
 };
 type PropType = {
 	list: ListItem[];
@@ -19,7 +20,7 @@ function Achievements({list}: PropType) {
 				</div>
 				<div>
 					<div className={styles.title}>{title}</div>
-					{details.map(item => <div className={styles.details} key={item}>{item}</div>)}
+					{details.map(({id, value}) => <div className={styles.details} key={id}>{value}</div>)}
 				</div>
 			</div>
 		))}
