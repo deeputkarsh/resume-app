@@ -4,4 +4,4 @@ processName=$2
 cd $destDir
 npm i --no-audit
 pm2 delete $processName
-pm2 start --time --name=$processName npm -- start -- -p 4000
+pm2 start --time --name=$processName npm -- start -- -p 2000
