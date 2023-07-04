@@ -31,6 +31,7 @@ export type UserData = {
 	achievementsData: AchievementsData;
 	projectsData: SectionData;
 	courseData: SectionData;
+	languageData: SectionData;
 	corporateExpData: SectionData;
 	corporateExpDataDev: SectionData;
 	corporateExpWtProjectData: SectionData;
