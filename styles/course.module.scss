@@ -1,0 +1,15 @@
+@import "list-items";
+.course-item{
+  font-size: 14px;
+  .title {
+    // margin-top: 5px;
+    font-size: 18px;
+    color: var(--blue);
+  }
+  .grade-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}

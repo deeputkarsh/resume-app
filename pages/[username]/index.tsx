@@ -7,6 +7,7 @@ import Projects from '@resume-app/components/Projects';
 import Education from '@resume-app/components/Education';
 import Sections from '@resume-app/components/Sections';
 import Summary from '@resume-app/components/Summary';
+import Course from '@resume-app/components/Course';
 import {type UserData} from '@resume-app/types';
 import {getAllUserPaths, getSpecificUserData} from '@resume-app/utils/helpers';
 
@@ -18,6 +19,7 @@ function App(props: {userData: UserData}) {
 		corporateExpData,
 		educationData,
 		techStackData,
+		courseData,
 	} = props.userData;
 
 	const leftSection = [{
@@ -45,6 +47,10 @@ function App(props: {userData: UserData}) {
 		Component: TechStack,
 		data: techStackData,
 	}, {
+		key: 'Course',
+		Component: Course,
+		data: courseData
+	},{
 		key: 'Education',
 		Component: Education,
 		data: educationData,
@@ -56,7 +62,8 @@ function App(props: {userData: UserData}) {
 				<div className={styles.row}>
 					<div className={styles['left-sections']}>
 						{
-							leftSection.map(({key, Component, data}) => <Sections
+							leftSection.filter(({data}) => Boolean(data))
+							.map(({key, Component, data}) => <Sections
 								key={key}
 								Component={Component}
 								data={data}
@@ -66,7 +73,8 @@ function App(props: {userData: UserData}) {
 					</div>
 					<div className={styles['right-sections']}>
 						{
-							rightSection.map(({key, Component, data}) => key === 'Education' ? <>
+							rightSection.filter(({data}) => Boolean(data))
+							.map(({key, Component, data}) => key === 'Education' ? <>
 								<br key={'ed-0'}/>
 								<br key={'ed-1'}/>
 								<Sections

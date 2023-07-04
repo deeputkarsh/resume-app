@@ -30,6 +30,7 @@ export type UserData = {
 	personalDetails: PersonalDetails;
 	achievementsData: AchievementsData;
 	projectsData: SectionData;
+	courseData: SectionData;
 	corporateExpData: SectionData;
 	corporateExpDataDev: SectionData;
 	corporateExpWtProjectData: SectionData;
