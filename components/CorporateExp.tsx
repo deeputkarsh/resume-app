@@ -35,6 +35,7 @@ function ExpItem({details, responsiblities}: ListItem, index: number) {
 			<ul>
 				{responsiblities.map(({id, value}) => (<li key={id}>{value}</li>))}
 			</ul>
+			{index == 2 ? <><br/><br/></>: null}
 		</div>
 	);
 }
